@@ -1,0 +1,6 @@
+<h2><%=@route.name%></h2>
+<p><%=@route.grade%></p><br>
+<form action="/activities/<%=@route.id%>" method="post">
+   <input id="hidden" type="hidden" name="_method" value="delete">
+   <input type="submit" value="delete">
+</form>

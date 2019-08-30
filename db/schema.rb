@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 20190811013454) do
+
+  create_table "routes", force: :cascade do |t|
+    t.string  "name"
+    t.string  "grade"
+    t.string  "location"
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "email"
-    t.string "password"
+    t.string "password_digest"
+    t.string "email_address"
   end
 
 end

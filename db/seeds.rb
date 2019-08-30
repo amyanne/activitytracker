@@ -1,0 +1,1 @@
+User.create(username: "amy", email_address: "amy@google.com", password_digest: "1234567")

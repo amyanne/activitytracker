@@ -1,0 +1,29 @@
+<div class="card-content white-text">
+         <span class="card-title">Welcome to Climbing Tracker!</span><br>
+         <p>We are here to help you track all your climbs!<br>Get started by clicking one of the following links!</p>
+      </div>
+
+
+<table class="striped">
+<thead>
+  <tr>
+      <th>Climbs</th>
+      <div class="card-action">
+         <a class="white-text" href="/activities/new">Create</a>
+      </div>
+  </tr>
+</thead>
+
+<tbody>
+    <% @routes.each do |route| %>
+        <tr>
+            <td><%= route.name %></td>
+            <td><%= route.grade %></td>
+            <td><a href="/activities/<%= route.id %>">View</a></td>
+            <td><a href="/activities/<%= route.id %>/edit">Edit</a></td>
+            </td>
+        </tr>
+    <% end %>
+</tbody>
+</table>
+<a href="/logout">Log Out</a>
